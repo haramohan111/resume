@@ -1,228 +1,516 @@
 <!DOCTYPE html>
-<html>
-<title>Haramohan</title>
-<meta charset="UTF-8">
-<meta http-equiv='cache-control' content='no-cache'>
-<meta http-equiv='expires' content='0'>
-<meta http-equiv='pragma' content='no-cache'>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
-</style>
-<body class="w3-light-grey">
-
-<!-- Page Container -->
-<div class="w3-content w3-margin-top" style="max-width:1400px;">
-
-  <!-- The Grid -->
-  <div class="w3-row-padding">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haramohan Mahalik - Senior MERN Stack Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
-    <!-- Left Column -->
-    <div class="w3-third">
-    
-      <div class="w3-white w3-text-grey w3-card-4">
-        <div class="w3-display-container">
-          <img src="hara1.png" style="width:100%" alt="Avatar">
-          <div class="w3-display-bottomleft w3-container w3-text-black">
-            <h2>Haramohan mahalik</h2>
-          </div>
-        </div>
-        <div class="w3-container">
-          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Full Stack Developer</p>
-          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>India, Hydrabad</p>
-          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>haramohan222@mail.com</p>
-          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>8457900906</p>
-          <hr>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --text-dark: #0f172a;
+      --text-muted: #475569;
+      --bg-light: #f8fafc;
+      --border-color: #e2e8f0;
+      --accent-bg: #eff6ff;
+    }
 
-          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
-          <p>React Js</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:100%">90%</div>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      background-color: #f1f5f9;
+      line-height: 1.5;
+      padding: 2rem 1rem;
+    }
+
+    .resume-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+      overflow: hidden;
+    }
+
+    /* Header */
+    header {
+      background-color: #0f172a;
+      color: #ffffff;
+      padding: 2.5rem 3rem;
+    }
+
+    header h1 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      margin-bottom: 0.25rem;
+    }
+
+    header .subtitle {
+      font-size: 1.1rem;
+      color: #94a3b8;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      font-size: 0.9rem;
+      color: #cbd5e1;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .contact-item a {
+      color: #cbd5e1;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .contact-item a:hover {
+      color: #60a5fa;
+    }
+
+    /* Layout */
+    .content-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+      padding: 2.5rem 3rem;
+    }
+
+    /* Typography & Components */
+    h2 {
+      font-size: 1.15rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--primary);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-bottom: 2px solid var(--accent-bg);
+      padding-bottom: 0.5rem;
+    }
+
+    .summary-text {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .timeline-item {
+      margin-bottom: 1.75rem;
+      position: relative;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.25rem;
+    }
+
+    .job-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+
+    .company-name {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .date-badge {
+      font-size: 0.8rem;
+      background-color: var(--bg-light);
+      color: var(--text-muted);
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    ul.bullets {
+      list-style-type: disc;
+      padding-left: 1.2rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    ul.bullets li {
+      margin-bottom: 0.4rem;
+    }
+
+    /* Project Cards */
+    .project-card {
+      background: var(--bg-light);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .project-tech {
+      font-size: 0.75rem;
+      background: #e2e8f0;
+      color: #334155;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+
+    .project-card ul {
+      padding-left: 1rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Skills Badges */
+    .skill-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .skill-group-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .skills-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .skill-badge {
+      background-color: var(--bg-light);
+      border: 1px solid var(--border-color);
+      color: var(--text-dark);
+      font-size: 0.8rem;
+      padding: 0.25rem 0.55rem;
+      border-radius: 6px;
+      font-weight: 500;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .content-grid {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+      }
+      header {
+        padding: 2rem 1.5rem;
+      }
+      .contact-info {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+
+    /* Print Stylesheet Optimization */
+    @media print {
+      body {
+        background-color: #ffffff;
+        padding: 0;
+      }
+      .resume-container {
+        box-shadow: none;
+        max-width: 100%;
+      }
+      header {
+        background-color: #1e293b !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="resume-container">
+    
+    <!-- HEADER -->
+    <header>
+      <h1>HARAMOHAN MAHALIK</h1>
+      <div class="subtitle">Senior MERN Stack Developer</div>
+      <div class="contact-info">
+        <div class="contact-item"><i class="fa-solid fa-phone"></i> +91-900000000</div>
+        <div class="contact-item"><i class="fa-solid fa-envelope"></i> haramohan222@gmail.com</div>
+        <div class="contact-item"><i class="fa-solid fa-location-dot"></i> Bengaluru, India</div>
+        <div class="contact-item"><i class="fa-brands fa-linkedin"></i> <a href="#">LinkedIn</a></div>
+        <div class="contact-item"><i class="fa-brands fa-github"></i> <a href="#">GitHub</a></div>
+      </div>
+    </header>
+
+    <div class="content-grid">
+      
+      <!-- MAIN COLUMN -->
+      <main>
+        
+        <!-- SUMMARY -->
+        <section style="margin-bottom: 2rem;">
+          <h2><i class="fa-solid fa-user"></i> Professional Summary</h2>
+          <p class="summary-text">
+            Senior MERN Stack Developer specializing in high-performance web applications. Led development of industry-leading platforms like <strong>BullVera</strong>, <strong>etrucknow</strong> (serving 500+ logistics partners), and <strong>YOSKOOL</strong> (adopted by 125+ schools). Passionate about architecting scalable systems with Next.js, optimizing performance, and mentoring engineering teams.
+          </p>
+        </section>
+
+        <!-- WORK EXPERIENCE -->
+        <section style="margin-bottom: 2rem;">
+          <h2><i class="fa-solid fa-briefcase"></i> Work Experience</h2>
+          
+          <div class="timeline-item">
+            <div class="job-header">
+              <span class="job-title">Freelance Full-Stack Developer</span>
+              <span class="date-badge">Jan 2024 - Present</span>
+            </div>
+            <div class="company-name">BullVera (Independent Paper Trading Platform)</div>
+            <ul class="bullets">
+              <li>Built and deployed the platform using React, Node.js, Express.js, TypeScript, MySQL, Redis, Docker, and Vercel.</li>
+              <li>Developed authentication, paper order execution, portfolio engine, admin dashboard, and real-time market data streaming.</li>
+            </ul>
           </div>
-          <p>Node js</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:100%">
-              <div class="w3-center w3-text-white">80%</div>
+
+          <div class="timeline-item">
+            <div class="job-header">
+              <span class="job-title">MERN Stack Developer</span>
+              <span class="date-badge">Aug 2020 - Oct 2022</span>
+            </div>
+            <div class="company-name">Vinterla Logistics (Kuehne + Nagel India)</div>
+            <ul class="bullets">
+              <li>Worked with advanced web development technologies like React, Node, Express, MongoDB, MySQL, ECMAScript, JavaScript.</li>
+              <li>Architected Redux state management, reducing API calls by 30% and improving overall app performance.</li>
+              <li>Provided ongoing support and technical guidance to the engineering team.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <div class="job-header">
+              <span class="job-title">MERN Stack Developer</span>
+              <span class="date-badge">Dec 2019 - Aug 2020</span>
+            </div>
+            <div class="company-name">Vaishnotech Solutions</div>
+            <ul class="bullets">
+              <li>Involved in designing and coding across all core application modules.</li>
+              <li>Optimized Google Maps API calls, reducing latency by 25%.</li>
+              <li>Engaged in MongoDB database design, schema analysis, and backend implementation.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <div class="job-header">
+              <span class="job-title">Node.js Developer</span>
+              <span class="date-badge">Jun 2017 - Dec 2019</span>
+            </div>
+            <div class="company-name">Richlabz IT Solutions Pvt Ltd.</div>
+            <ul class="bullets">
+              <li>Reduced e-commerce checkout errors by 40% through targeted Node.js backend optimizations.</li>
+              <li>Participated in design and architecture discussions directly with client stakeholders.</li>
+            </ul>
+          </div>
+
+        </section>
+
+        <!-- KEY PROJECTS -->
+        <section>
+          <h2><i class="fa-solid fa-code"></i> Key Projects</h2>
+
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-title">BULLVERA (Paper Trading Platform)</span>
+            </div>
+            <ul>
+              <li>Architected and deployed an independent paper trading platform with real-time market data streaming.</li>
+              <li>Engineered the core portfolio engine, paper order execution system, user authentication, and admin dashboard.</li>
+              <li>Utilized Docker, Redis, and Vercel to optimize system performance and seamless delivery.</li>
+            </ul>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-title">ETRUCKNOW (Logistics Platform)</span>
+              <span class="project-tech">Kuehne + Nagel</span>
+            </div>
+            <ul>
+              <li>Award-winning B2B platform connecting 500+ truck owners.</li>
+              <li>Implemented real-time GPS tracking and load matching algorithms.</li>
+            </ul>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-title">YOSKOOL (School Management ERP)</span>
+            </div>
+            <ul>
+              <li>Implemented automated attendance system with facial recognition, fee management module with SMS notifications, and teacher-parent communication portal.</li>
+              <li><strong>Outcome:</strong> Successfully adopted by 85+ schools in Hyderabad.</li>
+            </ul>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-title">BHAARATH MARKET (E-commerce Platform)</span>
+            </div>
+            <ul>
+              <li><strong>Features:</strong> Vendor dashboard for inventory management, AI-powered product recommendations, and multi-payment gateway support.</li>
+              <li><strong>Performance:</strong> Handled 500+ concurrent users seamlessly during peak sales events.</li>
+            </ul>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-title">SHOPPYPARK (E-commerce Marketplace)</span>
+            </div>
+            <ul>
+              <li>Developed seller registration workflow and implemented review/rating system for 10,000+ registered users.</li>
+            </ul>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-title">ELITE RESTAURANT (Food Ordering System)</span>
+            </div>
+            <ul>
+              <li>Menu search with filters (cuisine type, price range), secure payment integration (Razorpay), real-time order tracking.</li>
+            </ul>
+          </div>
+
+        </section>
+
+      </main>
+
+      <!-- SIDEBAR -->
+      <aside>
+        
+        <!-- TECHNICAL SKILLS -->
+        <section style="margin-bottom: 2rem;">
+          <h2><i class="fa-solid fa-gears"></i> Skills</h2>
+          
+          <div class="skill-group">
+            <div class="skill-group-title">Languages</div>
+            <div class="skills-flex">
+              <span class="skill-badge">TypeScript</span>
+              <span class="skill-badge">JavaScript (ES6+)</span>
             </div>
           </div>
-          <p>Express Js</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:100%">75%</div>
-          </div>
-          <p>Javascript</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:100%">50%</div>
-          </div>
-          <p>Next js</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:100%">50%</div>
-          </div>
-          <p>ECMAScript</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:100%">50%</div>
-          </div>
-          <p>TypeScript</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:100%">50%</div>
-          </div>
-          <p>MongoDb</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:100%">50%</div>
-          </div>
-          <p>Mysql</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:100%">50%</div>
-          </div>
-          <br>
-          <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
-          <p>English</p>
-          <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
-          </div>
-          <p>Hindi</p>
-          <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
-          </div>
-          <p>Odia</p>
-          <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
-          </div>
-          <br>
-        </div>
-      </div><br>
 
-    <!-- End Left Column -->
+          <div class="skill-group">
+            <div class="skill-group-title">Frontend</div>
+            <div class="skills-flex">
+              <span class="skill-badge">React.js</span>
+              <span class="skill-badge">Next.js</span>
+              <span class="skill-badge">HTML5</span>
+              <span class="skill-badge">CSS3</span>
+              <span class="skill-badge">Bootstrap</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-title">Backend & DB</div>
+            <div class="skills-flex">
+              <span class="skill-badge">Node.js</span>
+              <span class="skill-badge">Express.js</span>
+              <span class="skill-badge">MySQL</span>
+              <span class="skill-badge">MongoDB</span>
+              <span class="skill-badge">Redis</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-title">API & Auth</div>
+            <div class="skills-flex">
+              <span class="skill-badge">REST APIs</span>
+              <span class="skill-badge">JWT</span>
+              <span class="skill-badge">Axios</span>
+              <span class="skill-badge">WebSockets</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-title">ORM / ODM</div>
+            <div class="skills-flex">
+              <span class="skill-badge">Sequelize</span>
+              <span class="skill-badge">Mongoose</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-title">DevOps & Tools</div>
+            <div class="skills-flex">
+              <span class="skill-badge">Docker</span>
+              <span class="skill-badge">Vercel</span>
+              <span class="skill-badge">Render</span>
+              <span class="skill-badge">Git / GitHub</span>
+              <span class="skill-badge">VS Code</span>
+              <span class="skill-badge">Postman</span>
+              <span class="skill-badge">Jira</span>
+              <span class="skill-badge">Trello</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-title">Payments</div>
+            <div class="skills-flex">
+              <span class="skill-badge">Razorpay</span>
+              <span class="skill-badge">Cashfree</span>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- EDUCATION -->
+        <section>
+          <h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
+          <div style="margin-top: 0.5rem;">
+            <div style="font-weight: 600; font-size: 0.9rem;">B.Tech in Electrical & Electronics Engineering</div>
+            <div style="font-size: 0.85rem; color: var(--primary); margin-top: 0.2rem;">Biju Patnaik University of Technology</div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted); margin-top: 0.4rem;">
+              <span>Graduated: 2014</span>
+              <span><strong>CGPA: 7.2</strong></span>
+            </div>
+          </div>
+        </section>
+
+      </aside>
+
     </div>
-
-    <!-- Right Column -->
-    <div class="w3-twothird">
-    
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Full Stack Developer</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>28/08/2020 - 31/10/2022 Leaved  <span class="w3-tag w3-teal w3-round">Leaved</span></h6>
-          <p>•	Worked with advance web development technologies like React, Node, Express, MongoDB, MySQL, ECMAScript , JavaScript .</p>
-            <p>•	Worked with AXIOS, promise based HTTP client for the browser and node.js for hitting REST endpoints and fetching data into the app.</p>
-            <p>•	Used redux to store data globally and for easy retrieval of data to any component in the app.</p>
-            <p>•	Tested REST endpoints using POSTMAN, Express as server and MySQL for backend.</p>
-            <p>•	Providing support and technical guidance to team.</p>
-            
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>React & Node Js Developer</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>12/12/2019 – 28/08/2020</h6>
-          <p>•	Involved in Designing and coding part of all modules.</p>
-            <p>•	Involoved for developing google map distance matrix api.</p>
-            <p>•	Engaged in MySQL database design, analysis, and implementation.</p>
-            
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>PHP & Node Js Developer</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>01/06/2017 – 12/12/2019</h6>
-          <p>•	Involved in the development of e-commerce module in the website .</p>
-          <p> •	Reviewed programming projects and reported statuses to programming managers.</p>
-          <p> •	Developed an interactive report to display the product details.</p>
-          <p>•	Take part in design and architecture discussions with client.</p>
-        </div>
-      </div>
-
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Projects undertaken</h2>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Project:#1 </b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Title:     <span class="w3-tag w3-teal w3-round">etrucknow</span></h6>
-          <p>Client: Kuehne + Nagel International.</p>
-          <p>Description: etrucknow, is an award winning innovative platform connecting goods and truck owners for an economic, effective and timely engagement. 
-          We are committed to work in the large road-transportation eco-system and be a technology enabler to build in efficiency in the transportation business.</p>
-          
-            
-          <hr>
-        </div>
-
-        <div class="w3-container">
-            <h5 class="w3-opacity"><b>Project:#2 </b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Title:  <span class="w3-tag w3-teal w3-round">Elite Resturant </span></h6>
-   
-            <p>Description: Elite Resturant helps the customer to access the online food ordering platforms, search for the right restaurant or the dish they want to order, place their orders and pay easily.</p>
-            
-              
-            <hr>
-          </div>
-          <div class="w3-container">
-            <h5 class="w3-opacity"><b>Project:#3</b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Title:     <span class="w3-tag w3-teal w3-round">Hostelsincity </span></h6>
-         
-            <p>Description: Hostelsincity is like having a trusted friend who will be there for you. We not only help you find your accommodation, we want to be your friend and guide in the city. With our online and offline support,
-                 you will not have to worry about a thing.</p>
-            
-              
-            <hr>
-          </div>
-          <div class="w3-container">
-            <h5 class="w3-opacity"><b>Project:#4</b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Title:     <span class="w3-tag w3-teal w3-round">BAAZAA  </span></h6>
-            <p>Description: It’s a online platform to book search venues and booking online based on occasion requirement.</p>
-            
-              
-            <hr>
-          </di
-          <div class="w3-container">
-            <h5 class="w3-opacity"><b>Project:#5 </b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Title: <span class="w3-tag w3-teal w3-round">Shoppypark (https://shoppypark.com)</span></h6>
-            <p>Description: Shoppypark.com is a e-commerce website whose purpose to reach our world class products and services directly to customers across the country. A one-stop destination for shoppers, merchants and market enthusiasts, that binds buyers and sellers in a lucrative network.</p>
-            
-              
-            <hr>
-          </div>
-          <div class="w3-container">
-            <h5 class="w3-opacity"><b>Project:#6</b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Title:     <span class="w3-tag w3-teal w3-round">Talangana State Legal Services Authority (http://tslsa.telangana.gov.in/)</span></h6>
-            <p>Talangana State Legal Services Authorit is a government project.</p>
-            
-              
-            <hr>
-          </div>
-
-      </div>
-      <div class="w3-container w3-card w3-white">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Biju Patnaik University of Technology</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2010 - 2014</h6>
-          <p>Collage:Sanjaya Memorial Institute Of Technology</p>
-          <p>Degree: Bachelors of Technology</p>
-          <p>Major: Electrical & Electronics Engineering</p>
-          <p>CGPA: 7.2</p>
-
-          <hr>
-        </div>
-      </div>
-
-    <!-- End Right Column -->
-    </div>
-    
-  <!-- End Grid -->
   </div>
-  
-  <!-- End Page Container -->
-</div>
-
-<footer class="w3-container w3-teal w3-center w3-margin-top">
-  <p>Find me on social media.</p>
-  <i class="fa fa-facebook-official w3-hover-opacity"></i>
-  <i class="fa fa-instagram w3-hover-opacity"></i>
-  <i class="fa fa-snapchat w3-hover-opacity"></i>
-  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-  <i class="fa fa-twitter w3-hover-opacity"></i>
-  <i class="fa fa-linkedin w3-hover-opacity"></i>
-  <p>Powered by <a href="https://www.indiagnk.com/about-us/" target="_blank">Indiagnk</a></p>
-</footer>
 
 </body>
 </html>
